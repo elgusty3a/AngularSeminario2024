@@ -7,14 +7,14 @@ import { Book } from './Book';
   styleUrl: './book-card.component.scss'
 })
 export class BookCardComponent implements OnInit{
-
- books: Book[] = [
-  {
-    name: 'Juego de Tronos',
-    sinopsis: 'Text',
-    price: 12000,
-    pages: 520,
-    image: 'imagen1',
+  
+  books: Book[] = [
+    {
+      name: 'Juego de Tronos',
+      sinopsis: 'Text',
+      price: 12000,
+      pages: 520,
+    image: 'assets/img/juego.png',
     stock: true,
     quantity: 5
  },
@@ -23,7 +23,7 @@ export class BookCardComponent implements OnInit{
   sinopsis: 'Text',
   price: 12200,
   pages: 680,
-  image: 'imagen2',
+  image: 'assets/img/choque.png',
   stock: true,
   quantity: 4
  },
@@ -32,7 +32,7 @@ export class BookCardComponent implements OnInit{
   sinopsis: 'Text',
   price: 14600,
   pages: 884,
-  image: 'imagen3',
+  image: 'assets/img/tormenta.png',
   stock: false,
   quantity: 0
  },
@@ -41,7 +41,7 @@ export class BookCardComponent implements OnInit{
   sinopsis: 'Text',
   price: 10000,
   pages: 460,
-  image: 'imagen4',
+  image: 'assets/img/festin.png',
   stock: true,
   quantity: 6
  },
@@ -50,9 +50,13 @@ export class BookCardComponent implements OnInit{
   sinopsis: 'Text',
   price: 13600,
   pages: 1032,
-  image: 'imagen5',
+  image: 'assets/img/danza.png',
   stock: true,
   quantity: 2
- }
+}
 ]
+constructor(){}
+
+ngOnInit(): void {}
+
 }
