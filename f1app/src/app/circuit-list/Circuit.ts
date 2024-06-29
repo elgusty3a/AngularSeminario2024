@@ -10,4 +10,5 @@ export interface Circuit {
     time_record: string;
     pilot_record: string;
     stock: number;
+    quantity: number;
 }

@@ -25,6 +25,7 @@ export class CircuitListComponent implements OnInit{
       time_record: "1:19.813",
       pilot_record: "Charles Leclerc (2004)",
       stock: 20000,
+      quantity: 0
     },
     {
       name: "Autodromo Enzo e Dino Ferrari",
@@ -38,6 +39,7 @@ export class CircuitListComponent implements OnInit{
       time_record: "1:15.484",
       pilot_record: "Lewis Hamilton (2020)",
       stock: 20000,
+      quantity: 0
     },
     {
       name: "Circuit Gilles-Villeneuve",
@@ -51,6 +53,7 @@ export class CircuitListComponent implements OnInit{
       time_record: "1:13.078",
       pilot_record: "Valtteri Bottas (2019)",
       stock: 26840,
+      quantity: 0
     },
     {
       name: "Red Bull Ring",
@@ -64,6 +67,7 @@ export class CircuitListComponent implements OnInit{
       time_record: "1:05.619",
       pilot_record: "Carlos Sainz (2020)",
       stock: 15900,
+      quantity: 0
     },
     {
       name: "Silverstone Circuit",
@@ -77,6 +81,7 @@ export class CircuitListComponent implements OnInit{
       time_record: "1:27.097",
       pilot_record: "Max Verstappen (2020)",
       stock: 0,
+      quantity: 0
     },
     {
       name: "Circuit de Spa-Francorchamps",
@@ -90,6 +95,7 @@ export class CircuitListComponent implements OnInit{
       time_record: "1:46.286",
       pilot_record: "Valtteri Bottas (2018)",
       stock: 35000,
+      quantity: 0
     }
     
   ]
