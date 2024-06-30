@@ -17,7 +17,19 @@
     <tbody  class="table align-middle">
         <tr *ngFor="let circuit of circuits" [ngClass]="{'pass_event': (circuit.date_race.getDay() < hoy.getDay() && circuit.date_race.getMonth() <= hoy.getMonth()),'today_event': (circuit.date_race.getMonth() == hoy.getMonth() && circuit.date_race.getDay() == hoy.getDay())}">
             <td><span class="badge text-bg-danger" *ngIf="circuit.stock==0">SIN STOCK</span>
-                <app-sumador *ngIf="circuit.stock!=0 && !(circuit.date_race.getDay() < hoy.getDay() && circuit.date_race.getMonth() <= hoy.getMonth())"></app-sumador>
+                <!-- <app-sumador *ngIf="circuit.stock!=0 && !(circuit.date_race.getDay() < hoy.getDay() && circuit.date_race.getMonth() <= hoy.getMonth())"></app-sumador> -->
+                <div class="input-group" *ngIf="circuit.stock > 0">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-primary btn-sm" (click)="downQuantity(circuit.quantity)">-</button>
+                        </div>
+                        <input type="text" class="text-center" [(ngModel)]="circuit.quantity" (keyup)="changeQuantity($event, circuit)">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary btn-sm" (click)="upQuantity(circuit.quantity)">+</button>
+                        </div>
+                    </div>
+                    <br>
+                </div>
             </td>
             <td>{{circuit.price}}</td>
             <td>{{circuit.name}}</td>

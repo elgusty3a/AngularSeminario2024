@@ -103,4 +103,11 @@ export class CircuitListComponent implements OnInit{
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
+
+  upQuantity(circuit: Circuit): void{
+    circuit.quantity++;
+  }
+  downQuantity(circuit: Circuit): void{
+    circuit.quantity--;
+  }
 }
