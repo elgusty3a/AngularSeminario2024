@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { AboutComponent } from './about/about.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { CalendarioComponent } from './calendario/calendario.component';
+import { ShopComponent } from './shop/shop.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CalendarioComponent } from './calendario/calendario.component';
     SumadorComponent,
     AboutComponent,
     InicioComponent,
-    CalendarioComponent
+    CalendarioComponent,
+    ShopComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,17 @@
+.passEvent{
+    border: 5px solid rgb(209, 115, 133);
+    opacity: 0.3;
+}
+.todayEvent > td{
+    border: 5px solid rgb(78, 172, 101);
+    background: rgb(123, 184, 123);
+}
+td{
+    text-align: center;
+}
+input{
+    max-width: 30px;
+}
+.input-group{
+    width: max-content;
+}
