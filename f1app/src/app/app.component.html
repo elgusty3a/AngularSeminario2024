@@ -2,28 +2,26 @@
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <!-- <img src="assets/img/handofking.png" alt=""> -->
-      <a class="navbar-brand" href="#">{{title}}</a>
+      <a class="navbar-brand" [routerLink]="['/inicio']">{{title}}</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            <a class="nav-link active" aria-current="page" [routerLink]="['/inicio']">Inicio</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Saga Principal
+              Informacion
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Juego de Tronos</a></li>
-              <li><a class="dropdown-item" href="#">Choque de Reyes</a></li>
-              <li><a class="dropdown-item" href="#">Tormenta de Espadas</a></li>
-              <li><a class="dropdown-item" href="#">Festin de Cuervos</a></li>
-              <li><a class="dropdown-item" href="#">Danza de Dragones</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/calendario']">Calendario</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/escuderias']">Escuderias</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/pilotos']">Pilotos</a></li>
             </ul>
           </li>
-          <li class="nav-item dropdown">
+          <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Extras
             </a>
@@ -32,12 +30,12 @@
               <li><a class="dropdown-item" href="#">El mundo de Hielo y Fuego</a></li>
               <li><a class="dropdown-item" href="#">Fuego y Sangre</a></li>
             </ul>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/shop']">Shop</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Shop</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" [routerLink]="['/about']">About</a>
           </li>
         </ul>
       </div>
@@ -45,12 +43,13 @@
   </nav>
 </div>
 <div class="container">
-  <div class="row justify-content-around">
+  <router-outlet></router-outlet>
+  <!-- <div class="row justify-content-around">
     <div class="col-9">
       <app-circuit-list></app-circuit-list>
     </div>
     <div class="col-3">Shop</div>
-  </div>
+  </div> -->
 </div>
 
 <div>
