@@ -6,40 +6,34 @@
             <th>Precio</th>
             <th>Nombre</th>
             <th>Pais</th>
-            <!-- <th>Longitud</th>
-            <th>Vueltas</th>
-            <th>Record de vuelta</th>
-            <th>Piloto</th> -->
             <th>Fecha</th>
             <th>Trazado</th>
         </tr>
     </thead>
     <tbody  class="table align-middle">
-        <tr *ngFor="let circuit of circuits" [ngClass]="{'passEvent': ((circuit.date_race.getMonth() < (1+hoy.getMonth()))),'todayEvent':((((circuit.date_race.getDate() == (hoy.getDate()))))&&(circuit.date_race.getMonth() == (1+hoy.getMonth())))}"> 
-            <td><span class="badge text-bg-danger" *ngIf="circuit.stock==0">SIN STOCK</span>
-                <!-- <app-sumador *ngIf="circuit.stock!=0 && !(circuit.date_race.getDay() < hoy.getDay() && circuit.date_race.getMonth() <= hoy.getMonth())"></app-sumador> -->
-                <div class="input-group" *ngIf="(circuit.stock > 0 && (circuit.date_race.getMonth() > (1+hoy.getMonth())))">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <button class="btn btn-primary btn-sm" (click)="downQuantity(circuit)">-</button>
+        <tr *ngFor="let circuit of circuits"> 
+            <div *ngIf="(circuit.date_race.getDate() >= (hoy.getDate())&&(circuit.date_race.getMonth() >= (1+hoy.getMonth())))">
+                <td><span class="badge text-bg-danger" *ngIf="circuit.stock==0">SIN STOCK</span>
+                    <!-- <app-sumador *ngIf="circuit.stock!=0 && !(circuit.date_race.getDay() < hoy.getDay() && circuit.date_race.getMonth() <= hoy.getMonth())"></app-sumador> -->
+                    <div class="input-group" >
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <button class="btn btn-primary btn-sm" (click)="downQuantity(circuit)">-</button>
+                            </div>
+                            <input type="text" class="text-center" [(ngModel)]="circuit.quantity" (keyup)="changeQuantity($event, circuit)">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary btn-sm" (click)="upQuantity(circuit)">+</button>
+                            </div>
                         </div>
-                        <input type="text" class="text-center" [(ngModel)]="circuit.quantity" (keyup)="changeQuantity($event, circuit)">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary btn-sm" (click)="upQuantity(circuit)">+</button>
-                        </div>
+                        <br>
                     </div>
-                    <br>
-                </div>
-            </td>
-            <td>{{circuit.price}}</td>
-            <td>{{circuit.name}}</td>
-            <td>{{circuit.country}}</td>
-            <!-- <td>{{circuit.lengh}}</td>
-            <td>{{circuit.laps}}</td>
-            <td>{{circuit.time_record}}</td>
-            <td>{{circuit.pilot_record}}</td> -->
-            <td>{{circuit.date_race}}</td>
-            <td><img width="500" [src]="circuit.image" class="rounded img-fluid" [alt]="circuit.name" ></td>
+                </td>
+                <td>{{circuit.price}}</td>
+                <td>{{circuit.name}}</td>
+                <td>{{circuit.country}}</td>
+                <td>{{circuit.date_race}}</td>
+                <td><img width="500" [src]="circuit.image" class="rounded img-fluid" [alt]="circuit.name" ></td>
+            </div>
         </tr>
     </tbody>
 </table>
