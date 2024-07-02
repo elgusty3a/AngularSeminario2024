@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Circuit } from './Circuit';
+import { F1ShopService } from '../f1-shop.service';
 
 @Component({
   selector: 'app-circuit-list',
@@ -10,10 +11,11 @@ import { Circuit } from './Circuit';
 
 export class CircuitListComponent implements OnInit{
   // hoy:Date = new Date();
+  
   hoy = new Date();
   // fechaActual = String(this.hoy.getDate()).padStart(2, '0') + '/' + String(this.hoy.getMonth() + 1).padStart(2, '0') + '/' + this.hoy.getFullYear();
   dia: number = (this.hoy.getMonth());
-
+  
   
   circuits: Circuit[]=[
     {
@@ -101,25 +103,19 @@ export class CircuitListComponent implements OnInit{
       quantity: 0
     }
     
-  ]
+  ];
   
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
+  
+  
+  constructor(private carro: F1ShopService){
+    
   }
 
-  upQuantity(circuit: Circuit): void{
-    if(circuit.quantity < circuit.stock){
-      circuit.quantity++;
-    }
+  ngOnInit(): void {
   }
-  downQuantity(circuit: Circuit): void{
-    if(circuit.quantity > 0){
-      circuit.quantity--;
-    }
-  }
-  changeQuantity(event: { target: any; }, circuit: Circuit):void {
-    // event.preventDefault();
-    console.log(event.target);
+
+  agregarAlCarro(circuit: Circuit) : void{
+    this.agregarAlCarro(circuit);
   }
 
   

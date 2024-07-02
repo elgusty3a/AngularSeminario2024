@@ -12,6 +12,14 @@ td{
 input{
     max-width: 30px;
 }
-.input-group{
-    width: max-content;
+
+.primerCol{
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-success{
+    padding: 4px;
+    margin: 5px;
 }

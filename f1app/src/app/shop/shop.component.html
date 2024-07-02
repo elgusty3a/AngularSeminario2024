@@ -1,2 +1,13 @@
-<p>shop works!</p>
-<app-circuit-list></app-circuit-list>
+<div class="row justify-content-around">
+    <div class="col-9">
+      <app-circuit-list></app-circuit-list>
+    </div>
+    <div class="col-3">
+        <h1>Shop</h1>
+        <ul>
+          <li *ngFor="let circuit of circuits">
+              {{circuit.name}}: {{circuit.quantity}}
+          </li>
+      </ul>
+    </div>
+</div>

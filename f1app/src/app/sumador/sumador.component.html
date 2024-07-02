@@ -1,14 +1,14 @@
-<h3>soy sumador</h3>
+<!-- <h3>soy sumador</h3> -->
 
-<!-- <div class="input-group" *ngIf="circuit.stock">
-    <div class="input-group">
+<div class="input-group">
+    <div class="input-group inputGroup">
         <div class="input-group-prepend">
-            <button class="btn btn-primary btn-sm" (click)="downQuantity(circuit.quantity)">-</button>
+            <button class="btn btn-primary btn-sm btnSumador" (click)="downQuantity()">-</button>
         </div>
-        <input type="text" class="text-center" [(ngModel)]="circuit.quantity" (keyup)="changeQuantity($event, circuit)">
+        <input type="text" class="text-center inputCompra" [(ngModel)]="cantidad" (keyup)="changeQuantity($event)">
         <div class="input-group-append">
-            <button class="btn btn-primary btn-sm" (click)="upQuantity(circuit.quantity)">+</button>
+            <button class="btn btn-primary btn-sm btnSumador" (click)="upQuantity()">+</button>
         </div>
     </div>
     <br>
-</div> -->
+</div>
