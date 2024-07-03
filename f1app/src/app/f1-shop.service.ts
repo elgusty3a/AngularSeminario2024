@@ -1,18 +1,24 @@
 import { Injectable } from '@angular/core';
 import { Circuit } from './circuit-list/Circuit';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class F1ShopService {
 
-  listaCompras: Circuit[] = [];
-  constructor() { }
+  // private _listaCompras: Circuit[] = [];
+
+  // listaCompras: BehaviorSubject<Circuit[]> = new BehaviorSubject([]);
+  // constructor() { }
   // agregarAlCarro(circuit: Circuit){
-  //   let item: Circuit = this.listaCompras.find((v1) => v1.name == circuit.name);
+  //   let item: Circuit = this._listaCompras.find((v1) => v1.name == circuit.name);
   //   if(!item){
-  //     this.listaCompras.push(circuit);
+  //     this._listaCompras.push({...circuit});
+  //   }else{
+  //     item.quantity += circuit.quantity;
   //   }
+  //   this.listaCompras.next(this._listaCompras);
   // }
 
 }

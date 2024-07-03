@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { CalendarioComponent } from './calendario/calendario.component';
 import { ShopComponent } from './shop/shop.component';
+import { CarroComponent } from './carro/carro.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ShopComponent } from './shop/shop.component';
     AboutComponent,
     InicioComponent,
     CalendarioComponent,
-    ShopComponent
+    ShopComponent,
+    CarroComponent
   ],
   imports: [
     BrowserModule,

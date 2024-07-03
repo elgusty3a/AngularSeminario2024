@@ -2,10 +2,15 @@
     border: 5px solid rgb(209, 115, 133);
     opacity: 0.3;
 }
-.todayEvent > td{
-    border: 5px solid rgb(78, 172, 101);
-    background: rgb(123, 184, 123);
+.todayEvent td{
+    border: none;
+    opacity: 0.8;
+    background: rgb(123, 184, 123, 0.8);
 }
+.todayEvent img{
+    opacity: 1;
+}
+
 td{
     text-align: center;
 }

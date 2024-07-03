@@ -1,14 +1,18 @@
 .inputCompra{
     max-width: 40px;
-    margin: 0px 2px 0px 2px;
 }
 .btnSumador{
     width: 30px;
+    height: 30px;
     margin: 0px 2px 0px 2px;
     padding: 0;
+    border-radius: 50%;
 }
 .inputGroup{
-    justify-content: center;
+    justify-content: space-between;
     padding: 0;
     margin: 0;
+}
+input{
+    border: 0;
 }

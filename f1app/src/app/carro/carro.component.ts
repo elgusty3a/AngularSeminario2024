@@ -3,11 +3,11 @@ import { F1ShopService } from '../f1-shop.service';
 import { Circuit } from '../circuit-list/Circuit';
 
 @Component({
-  selector: 'app-shop',
-  templateUrl: './shop.component.html',
-  styleUrl: './shop.component.scss'
+  selector: 'app-carro',
+  templateUrl: './carro.component.html',
+  styleUrl: './carro.component.scss'
 })
-export class ShopComponent implements OnInit{
+export class CarroComponent implements OnInit{
   
   circuit: Circuit[];
   
@@ -16,4 +16,5 @@ export class ShopComponent implements OnInit{
 
   ngOnInit(): void {
   }
+
 }

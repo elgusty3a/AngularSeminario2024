@@ -1,7 +1,6 @@
-<p>calendario works!</p>
-<!-- <h1>Adquirí tu entrada aquí</h1>
+
 <table class="table">
-    <thead  class="table align-middle">
+    <thead  class="table align-middle text-center">
         <tr>
             <th>Nombre</th>
             <th>Pais</th>
@@ -14,7 +13,19 @@
         </tr>
     </thead>
     <tbody  class="table align-middle">
-        <tr *ngFor="let circuit of circuits" [ngClass]="{'passEvent': ((circuit.date_race.getMonth() < (1+hoy.getMonth()))),'todayEvent':((((circuit.date_race.getDate() == (hoy.getDate()))))&&(circuit.date_race.getMonth() == (1+hoy.getMonth())))}"> 
+        @for (circuit of circuits; track circuit.name) {
+            <tr [ngClass]="{'passEvent': ((circuit.date_race.getMonth() < (1+hoy.getMonth()))),'todayEvent':((((circuit.date_race.getDate() == (hoy.getDate()))))&&(circuit.date_race.getMonth() == (1+hoy.getMonth())))}"> 
+                <td>{{circuit.name}}</td>
+                <td>{{circuit.country}}</td>
+                <td>{{circuit.lengh}}</td>
+                <td>{{circuit.laps}}</td>
+                <td>{{circuit.time_record}}</td>
+                <td>{{circuit.pilot_record}}</td>
+                <td>{{circuit.date_race | date}}</td>
+                <td><img width="200" [src]="circuit.image" class="rounded img-fluid" [alt]="circuit.name" ></td>
+            </tr>
+        } -->
+        <!-- <tr *ngFor="let circuit of circuits" [ngClass]="{'passEvent': ((circuit.date_race.getMonth() < (1+hoy.getMonth()))),'todayEvent':((((circuit.date_race.getDate() == (hoy.getDate()))))&&(circuit.date_race.getMonth() == (1+hoy.getMonth())))}"> 
             <td>{{circuit.name}}</td>
             <td>{{circuit.country}}</td>
             <td>{{circuit.lengh}}</td>
@@ -23,6 +34,6 @@
             <td>{{circuit.pilot_record}}</td>
             <td>{{circuit.date_race}}</td>
             <td><img width="500" [src]="circuit.image" class="rounded img-fluid" [alt]="circuit.name" ></td>
-        </tr>
-    </tbody>
-</table> -->
+        </tr> -->
+    <!-- </tbody> -->
+</table>

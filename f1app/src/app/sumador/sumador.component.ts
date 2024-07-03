@@ -11,9 +11,9 @@ export class SumadorComponent implements OnInit {
   
 
   @Input()
-  cantidad!: number;
+  cantidad: number;
   @Input()
-  maximo!: number;
+  maximo: number;
   @Output()
   cantidadChange: EventEmitter<number> = new EventEmitter<number>;
 

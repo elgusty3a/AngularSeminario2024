@@ -1,7 +1,7 @@
-<div>
+<div class="barra">
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <!-- <img src="assets/img/handofking.png" alt=""> -->
+      <a [routerLink]="['/inicio']"><img class="imgLogo" src="assets/img/f1Logo.avif" alt=""></a>
       <a class="navbar-brand" [routerLink]="['/inicio']">{{title}}</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -54,7 +54,18 @@
 
 <div>
   <footer>
-    {{title}} 2024
+    <div class="card text-center">
+      <div class="card-header">
+        {{title}} 2024
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Seminario Angular</h5>
+        <p class="card-text">Tecnicatura Universitaria en Desarrollo de Aplicaciones Informaticas</p>
+      </div>
+      <div class="card-footer text-body-secondary">
+        Arias Gustavo
+      </div>
+    </div>
   </footer>
 </div>
 
