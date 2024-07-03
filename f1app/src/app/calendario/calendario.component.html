@@ -24,7 +24,7 @@
                 <td>{{circuit.date_race | date}}</td>
                 <td><img width="200" [src]="circuit.image" class="rounded img-fluid" [alt]="circuit.name" ></td>
             </tr>
-        } -->
+        }
         <!-- <tr *ngFor="let circuit of circuits" [ngClass]="{'passEvent': ((circuit.date_race.getMonth() < (1+hoy.getMonth()))),'todayEvent':((((circuit.date_race.getDate() == (hoy.getDate()))))&&(circuit.date_race.getMonth() == (1+hoy.getMonth())))}"> 
             <td>{{circuit.name}}</td>
             <td>{{circuit.country}}</td>

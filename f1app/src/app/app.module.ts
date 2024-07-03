@@ -11,6 +11,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { CalendarioComponent } from './calendario/calendario.component';
 import { ShopComponent } from './shop/shop.component';
 import { CarroComponent } from './carro/carro.component';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,9 +27,9 @@ import { CarroComponent } from './carro/carro.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
-  providers: [],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

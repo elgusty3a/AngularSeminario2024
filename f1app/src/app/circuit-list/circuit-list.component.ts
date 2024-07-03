@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-// import { Circuit } from './Circuit';
-import { F1MockService } from '../f1-mock.service';
+// import { F1MockService } from '../f1-mock.service';
 import { Circuit } from './Circuit';
+import { F1AppDataService } from '../f1-app-data.service';
 
 @Component({
   selector: 'app-circuit-list',
@@ -13,12 +13,15 @@ import { Circuit } from './Circuit';
 // fechaActual = String(this.hoy.getDate()).padStart(2, '0') + '/' + String(this.hoy.getMonth() + 1).padStart(2, '0') + '/' + this.hoy.getFullYear();
  export class CircuitListComponent implements OnInit{
   hoy = new Date();
-  circuits: any[];
+  circuits: Circuit[] = [];
 
-  constructor(private f1MockService: F1MockService) { }
+  constructor(
+    // private f1MockService: F1MockService,
+    private f1AppDataService: F1AppDataService) { }
 
   ngOnInit() {
-    this.circuits = this.f1MockService.getMockDataCircuits();
+    // this.circuits = this.f1MockService.getMockDataCircuits();
+    this.f1AppDataService.getF1DataCircuits().subscribe(circuits => this.circuits = circuits);
   }
 
   
