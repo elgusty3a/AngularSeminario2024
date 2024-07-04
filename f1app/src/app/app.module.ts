@@ -12,6 +12,7 @@ import { CalendarioComponent } from './calendario/calendario.component';
 import { ShopComponent } from './shop/shop.component';
 import { CarroComponent } from './carro/carro.component';
 import { provideHttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import { provideHttpClient } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule
   ],
+  // providers: [],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent]
 })

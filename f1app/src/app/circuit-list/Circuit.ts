@@ -6,7 +6,7 @@ export interface Circuit {
     price: number;
     image: string;
     pass: boolean;
-    date_race: Date;
+    date_race: string;
     time_record: string;
     pilot_record: string;
     stock: number;
