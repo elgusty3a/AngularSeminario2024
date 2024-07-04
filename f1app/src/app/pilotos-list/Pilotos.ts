@@ -3,5 +3,5 @@ export interface Pilotos {
     country: string;
     age: string;
     escuderia: string;
-    imagen: string;
+    image: string;
 }

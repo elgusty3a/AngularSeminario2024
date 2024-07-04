@@ -4,10 +4,12 @@ import { Observable, tap } from 'rxjs';
 import { Circuit } from './circuit-list/Circuit';
 import { Pilotos } from './pilotos-list/Pilotos';
 
-// const URLCIRCUITS = 'https://apimocha.com/f1appdata/f1ShopTickets';
+const URLPILOTOS = 'https://apimocha.com/f1appdata/pilotos';
+const URLCIRCUITS = 'https://apimocha.com/f1appdata/circuitss';
 
-const URLCIRCUITS = 'https://f1app.free.beeceptor.com/circuitos';
-const URLPILOTOS = 'https://f1app.free.beeceptor.com/pilotos';
+// const URLCIRCUITS = 'https://f1app.free.beeceptor.com/circuitos';
+// const URLPILOTOS = 'https://f1app.free.beeceptor.com/pilotos';
+
 // const URLCIRCUITS = 'https://649b2200bf7c145d023a0d02.mockapi.io/f1AppData/pedido';
 
 // const URLCIRCUITS = 'https://mp6cbc3336bb1cd859a4.free.beeceptor.com/dataCircuitsJSON';
