@@ -5,7 +5,7 @@ import { Circuit } from './circuit-list/Circuit';
 import { Pilotos } from './pilotos-list/Pilotos';
 
 const URLPILOTOS = 'https://apimocha.com/f1appdata/pilotos';
-const URLCIRCUITS = 'https://apimocha.com/f1appdata/circuitss';
+const URLCIRCUITS = 'https://apimocha.com/f1appdata/circuits';
 
 // const URLCIRCUITS = 'https://f1app.free.beeceptor.com/circuitos';
 // const URLPILOTOS = 'https://f1app.free.beeceptor.com/pilotos';
