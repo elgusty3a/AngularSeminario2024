@@ -1,0 +1,17 @@
+<p>pilotos-list works!</p>
+<div class="row row-cols-1 row-cols-md-4 g-4">
+  @for (piloto of pilotos; track piloto.name){
+    
+    <div class="col">
+      <div class="card text-center" style="max-width: 18rem;">
+        <img [src]="piloto.imagen" class="card-img-top" [alt]="piloto.name">
+        <div class="card-body">
+          <h5 class="card-title">{{piloto.name}}</h5>
+          <p class="card-text">Pais de origen: {{piloto.country}}
+          <p class="card-text small">Fecha de nacimiento: {{piloto.age}}
+          <!-- <p class="card-text">Escuderia: <span class="escuderia">{{piloto.escuderia}}</span></p> -->
+        </div>
+      </div>
+    </div>
+  }
+</div>

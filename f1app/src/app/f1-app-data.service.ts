@@ -2,13 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
 import { Circuit } from './circuit-list/Circuit';
+import { Pilotos } from './pilotos-list/Pilotos';
 
 // const URLCIRCUITS = 'https://apimocha.com/f1appdata/f1ShopTickets';
 
 const URLCIRCUITS = 'https://f1app.free.beeceptor.com/circuitos';
+const URLPILOTOS = 'https://f1app.free.beeceptor.com/pilotos';
 // const URLCIRCUITS = 'https://649b2200bf7c145d023a0d02.mockapi.io/f1AppData/pedido';
 
-// const URLCIRCUITS = 'https://mp6cbc3336bb1cd859a4.free.beeceptor.com/dataCircuits';
 // const URLCIRCUITS = 'https://mp6cbc3336bb1cd859a4.free.beeceptor.com/dataCircuitsJSON';
 @Injectable({
   providedIn: 'root'
@@ -21,6 +22,12 @@ export class F1AppDataService {
     // return this.http.get<Circuit[]>(URLCIRCUITS);
     return this.http.get<Circuit[]>(URLCIRCUITS).pipe(
       tap((circuits: Circuit[])=>console.log(circuits))
+    );
+  }
+  public getF1DataPilotos(): Observable<Pilotos[]> {
+    // return this.http.get<Circuit[]>(URLCIRCUITS);
+    return this.http.get<Pilotos[]>(URLPILOTOS).pipe(
+      tap((pilotos: Pilotos[])=>console.log(pilotos))
     );
   }
 

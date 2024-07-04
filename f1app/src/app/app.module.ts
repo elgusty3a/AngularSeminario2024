@@ -13,6 +13,8 @@ import { ShopComponent } from './shop/shop.component';
 import { CarroComponent } from './carro/carro.component';
 import { provideHttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
+import { PilotosListComponent } from './pilotos-list/pilotos-list.component';
+import { EscuderiasListComponent } from './escuderias-list/escuderias-list.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { HttpClientModule } from '@angular/common/http';
     InicioComponent,
     CalendarioComponent,
     ShopComponent,
-    CarroComponent
+    CarroComponent,
+    PilotosListComponent,
+    EscuderiasListComponent
   ],
   imports: [
     BrowserModule,
