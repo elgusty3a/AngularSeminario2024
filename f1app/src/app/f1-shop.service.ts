@@ -15,8 +15,6 @@ export class F1ShopService {
   constructor() { }
 
   agregarAlCarro(circuit: Circuit){
-    console.log(this.listaCompras);
-    
     let item = this._listaCompras.find((v1) => v1.name == circuit.name);
     if(!item){
       this._listaCompras.push({...circuit});
@@ -25,19 +23,33 @@ export class F1ShopService {
     }
     this.listaCompras.value[0].stock -= circuit.quantity;
     this.listaCompras.next(this._listaCompras);
-    
-    console.log(this._listaCompras);
+    this.sumaCarro=0;
+    this.sumarPedido();    
   }
   quitarDeCarro(circuit: Circuit){
-  //   console.log(this.listaCompras);
     let item = this._listaCompras.find((v1) => v1.name == circuit.name);
     if(item){
       this._listaCompras = this._listaCompras.filter(i => i != item);
     }
     this.listaCompras.next(this._listaCompras);
-  //   // this.listaCompras.value[0].stock += circuit.quantity;
-    
-  //   console.log(this._listaCompras);
+    this.sumaCarro=0;
+    this.sumarPedido();
   }
+  public sumaCarro = 0;
+  sumarPedido():number{
+    let sum=0;
+    this._listaCompras.forEach(circuit => {
+      sum += circuit.quantity * circuit.price
+    });
+    console.log(sum);
+    this.sumaCarro += sum;
+    return sum;
+  }
+
+  total(){
+    this.sumaCarro;
+  }
+  
+  
 
 }

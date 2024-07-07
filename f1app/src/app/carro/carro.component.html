@@ -1,18 +1,24 @@
-<p>carro works!</p>
+<h1>Su pedido</h1>
+<h5>Total a pagar:    
+  {{total() | currency:'ARS'}}
+</h5>
 <ul>
     <li *ngFor="let circuit of listaCompras$|async">
-        <div class="col">
-            <div class="card text-center" style="max-width: 18rem;">
-              <img [src]="circuit.image" class="card-img-top" [alt]="circuit.name">
-              <div class="card-body">
-                <h5 class="card-title">{{circuit.name}}</h5>
-                <p class="card-text">Cantidad: {{circuit.quantity}}
-                <!-- <p class="card-text">Escuderia: <span class="escuderia">{{piloto.escuderia}}</span></p> -->
-              </div>
+      <div class="card mb-3" style="max-width: 18rem;">
+        <div class="row g-0">
+          <div class="col-md-5 imgCircuit">
+            <img [src]="circuit.image" class="card-img-top" [alt]="circuit.name">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <p class="card-title">{{circuit.name}}</p>
+              <p class="card-text"><small class="text-body-secondary">Cantidad: {{circuit.quantity}}</small></p>
               <div>
-                <button  type="button" class="btn btn-danger" (click)="quitarDeCarro(circuit)">Quitar</button>
+                <button  type="button" class="btn btn-danger btnQuitar" (click)="quitarDeCarro(circuit)">Quitar</button>
               </div>
             </div>
+          </div>
         </div>
+      </div>
     </li>
 </ul>

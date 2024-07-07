@@ -12,9 +12,7 @@
     </thead>
     <tbody  class="table align-middle">
         @for (circuit of circuits; track circuit.name){
-            <!-- @if ((circuit.date_race.getDate() >= (hoy.getDate())&&(circuit.date_race.getMonth() >= (1+hoy.getMonth())))){ -->
             @if (!eventoPasado(circuit)){
-                <!-- <tr [ngClass]="{'todayEvent':((circuit.date_race.getDate() == (hoy.getDate())))&&(circuit.date_race.getMonth() == (1+hoy.getMonth()))}">  -->
                 <tr> 
                     <td><span class="badge text-bg-danger" *ngIf="circuit.stock==0">SIN STOCK</span>
                         @if (circuit.stock > 0) {
@@ -24,37 +22,13 @@
                             </div>
                         }
                     </td>
-                    <td>{{circuit.name}}</td>
                     <td>{{circuit.price | currency}}</td>
+                    <td>{{circuit.name}}</td>
                     <td>{{circuit.country}}</td>
                     <td>{{circuit.date_race}}</td>
                     <td><img width="200" [src]="circuit.image" class="rounded img-fluid" [alt]="circuit.name" ></td>
                 </tr>
             }
         }
-
-
-
-
-        <!-- <tr *ngFor="let circuit of circuits">  -->
-            <!-- <td><span class="badge text-bg-danger" *ngIf="circuit.stock==0">SIN STOCK</span> -->
-            <!-- <td *ngIf="eventoPasado(circuit)"><span class="badge text-bg-danger" *ngIf="circuit.stock==0">SIN STOCK</span>
-                <div *ngIf="circuit.stock > 0" class="primerCol">
-                    <app-sumador [(cantidad)]="circuit.quantity" [maximo]="circuit.stock"></app-sumador>
-                    <button  type="button" class="btn btn-success" (click)="agregarAlCarro(circuit)">Agregar al carro</button>
-                </div>
-            </td>
-            <td>{{circuit.name}}</td>
-            <td>{{circuit.price | currency}}</td>
-            <td>{{circuit.country}}</td>
-            <td>{{circuit.date_race}}</td>
-            <td><img width="500" [src]="circuit.image" class="rounded img-fluid" [alt]="circuit.name" ></td> -->
-            <!-- <td *ngIf="(circuit.date_race.getDate() >= (hoy.getDate())&&(circuit.date_race.getMonth() >= (1+hoy.getMonth())))">{{circuit.name}}</td>
-            <td *ngIf="(circuit.date_race.getDate() >= (hoy.getDate())&&(circuit.date_race.getMonth() >= (1+hoy.getMonth())))">{{circuit.price | currency}}</td>
-            <td *ngIf="(circuit.date_race.getDate() >= (hoy.getDate())&&(circuit.date_race.getMonth() >= (1+hoy.getMonth())))">{{circuit.country}}</td>
-            <td *ngIf="(circuit.date_race.getDate() >= (hoy.getDate())&&(circuit.date_race.getMonth() >= (1+hoy.getMonth())))">{{circuit.date_race}}</td>
-            <td *ngIf="(circuit.date_race.getDate() >= (hoy.getDate())&&(circuit.date_race.getMonth() >= (1+hoy.getMonth())))"><img width="500" [src]="circuit.image" class="rounded img-fluid" [alt]="circuit.name" ></td> 
-        </tr> 
-            -->
     </tbody>
 </table>

@@ -46,7 +46,7 @@ import { F1ShopService } from '../f1-shop.service';
     circuit.stock -= circuit.quantity;
     circuit.quantity = 0;
   }
-  
+
 
   
 
