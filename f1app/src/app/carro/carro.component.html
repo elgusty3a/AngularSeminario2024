@@ -1,5 +1,5 @@
 <h1>Su pedido</h1>
-<h5>Total a pagar:    
+<h5 *ngIf="total() != 0">Total a pagar:    
   {{total() | currency:'ARS'}}
 </h5>
 <ul>
