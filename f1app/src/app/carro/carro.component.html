@@ -1,6 +1,18 @@
 <p>carro works!</p>
-<!-- <ul>
-    <li *ngFor="let circuit of circuits">
-        {{circuit.name}}: {{circuit.quantity}}
+<ul>
+    <li *ngFor="let circuit of listaCompras$|async">
+        <div class="col">
+            <div class="card text-center" style="max-width: 18rem;">
+              <img [src]="circuit.image" class="card-img-top" [alt]="circuit.name">
+              <div class="card-body">
+                <h5 class="card-title">{{circuit.name}}</h5>
+                <p class="card-text">Cantidad: {{circuit.quantity}}
+                <!-- <p class="card-text">Escuderia: <span class="escuderia">{{piloto.escuderia}}</span></p> -->
+              </div>
+              <div>
+                <button  type="button" class="btn btn-danger" (click)="quitarDeCarro(circuit)">Quitar</button>
+              </div>
+            </div>
+        </div>
     </li>
-</ul> -->
+</ul>

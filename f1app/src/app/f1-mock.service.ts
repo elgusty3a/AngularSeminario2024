@@ -31,7 +31,7 @@ export class F1MockService implements OnInit{
         date_race: "2024-05-29",
         time_record: "1:15.484",
         pilot_record: "Lewis Hamilton (2020)",
-        stock: 20000,
+        stock: 20,
         quantity: 0
       },
       {
@@ -45,7 +45,7 @@ export class F1MockService implements OnInit{
         date_race: "2024-06-19",
         time_record: "1:13.078",
         pilot_record: "Valtteri Bottas (2019)",
-        stock: 26840,
+        stock: 26,
         quantity: 0
       },
       {
@@ -56,10 +56,10 @@ export class F1MockService implements OnInit{
         price: 500,
         image: 'assets/img/Austriacarbon.png',
         pass: false,
-        date_race: "2024-07-30",
+        date_race: "2024-07-02",
         time_record: "1:05.619",
         pilot_record: "Carlos Sainz (2020)",
-        stock: 15900,
+        stock: 15,
         quantity: 0
       },
       {
@@ -87,7 +87,7 @@ export class F1MockService implements OnInit{
         date_race: "2024-08-15",
         time_record: "1:46.286",
         pilot_record: "Valtteri Bottas (2018)",
-        stock: 35000,
+        stock: 3,
         quantity: 0
       },
       {
@@ -101,7 +101,7 @@ export class F1MockService implements OnInit{
         date_race: "2024-09-24",
         time_record: "1:19.813",
         pilot_record: "Charles Leclerc (2004)",
-        stock: 20000,
+        stock: 2,
         quantity: 0
       }
       
@@ -169,6 +169,9 @@ export class F1MockService implements OnInit{
 
   getMockDataCircuits() {
     return this.circuits;
+  }
+  getMockDataPilotos() {
+    return this.pilotos;
   }
 }
 
