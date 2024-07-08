@@ -27,12 +27,16 @@
 - Para las pruebas con la API se utilizaron las paginas https://apimocha.com y 'https://beeceptor.com las cuales son gratuitas y por ello tienen un limite de consultas por dia. si no funciona una se puede utilizar la otra.
 - los links para hacer las conssultas GET son los siguientes:
 
+| Apimocha |
+| :------------: |
 | URLCIRCUITS = 'https://apimocha.com/f1appdata/circuits'; |
 | URLPILOTOS = 'https://apimocha.com/f1appdata/pilotos'; |
 | URLESCUDERIAS = 'https://apimocha.com/f1appdata/escuderias'; |
 
 o bien
 
+| Beeceptor |
+| :------------: |
 | URLCIRCUITS = 'https://f1app.free.beeceptor.com/circuitos'; |
 | URLPILOTOS = 'https://f1app.free.beeceptor.com/pilotos'; |
 | URLESCUDERIAS = 'https://f1app.free.beeceptor.com/escuderias'; |
