@@ -27,15 +27,15 @@
 - Para las pruebas con la API se utilizaron las paginas https://apimocha.com y 'https://beeceptor.com las cuales son gratuitas y por ello tienen un limite de consultas por dia. si no funciona una se puede utilizar la otra.
 - los links para hacer las conssultas GET son los siguientes:
 
-const URLCIRCUITS = 'https://apimocha.com/f1appdata/circuits';
-const URLPILOTOS = 'https://apimocha.com/f1appdata/pilotos';
-const URLESCUDERIAS = 'https://apimocha.com/f1appdata/escuderias';
+| URLCIRCUITS = 'https://apimocha.com/f1appdata/circuits'; |
+| URLPILOTOS = 'https://apimocha.com/f1appdata/pilotos'; |
+| URLESCUDERIAS = 'https://apimocha.com/f1appdata/escuderias'; |
 
 o bien
 
-const URLCIRCUITS = 'https://f1app.free.beeceptor.com/circuitos';
-const URLPILOTOS = 'https://f1app.free.beeceptor.com/pilotos';
-const URLESCUDERIAS = 'https://f1app.free.beeceptor.com/escuderias';
+| URLCIRCUITS = 'https://f1app.free.beeceptor.com/circuitos'; |
+| URLPILOTOS = 'https://f1app.free.beeceptor.com/pilotos'; |
+| URLESCUDERIAS = 'https://f1app.free.beeceptor.com/escuderias'; |
 
 ## En caso de fallar las URL de las API
   - Existe en el código una maqueta (MOCK) que se puede utiliar para testear la aplicación.
@@ -48,17 +48,14 @@ const URLESCUDERIAS = 'https://f1app.free.beeceptor.com/escuderias';
 | pilotos              | GET     | F1AppDataService | getF1DataPilotos        |
 | escuderias           | GET     | F1AppDataService | getF1DataEscuderias     |
 
-# F1app
+# Nota
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6.
+Este proyecto esta creado con [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6.
 
-## Development server
+## Servidor para desarrollo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+correr `ng serve` para iniciar el servidor. Abrir `http://localhost:4200/` en un navegador web. La pagina se recargará automanticamente si se hace algun cambio en el codigo fuente de la misma.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 
 
