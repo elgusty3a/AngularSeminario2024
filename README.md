@@ -4,9 +4,9 @@
 ### AUTOR:
 
 
-| NOMBRE  | e-mail  | Github | Stackblitz |
-| :------------: |:---------------:| :-------------------: | :-------------------: |
-| Arias Gustavo      | ariasgustavo3a@gmail.com | https://github.com/elgusty3a | https://stackblitz.com/~/github.com/elgusty3a/AngularSeminario2024 |
+| NOMBRE | Sede | e-mail  | Github | Stackblitz |
+| :------------: |:---------------: |:---------------:| :-------------------: | :-------------------: |
+| Arias Gustavo  | Tres Arroyos     | ariasgustavo3a@gmail.com | https://github.com/elgusty3a | https://stackblitz.com/~/github.com/elgusty3a/AngularSeminario2024 |
 
 
 #
