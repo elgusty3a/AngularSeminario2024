@@ -4,9 +4,9 @@
 ### AUTOR:
 
 
-| NOMBRE | Sede | e-mail  | Github | Stackblitz |
-| :------------: |:---------------: |:---------------:| :-------------------: | :-------------------: |
-| Arias Gustavo  | Tres Arroyos     | ariasgustavo3a@gmail.com | https://github.com/elgusty3a | https://stackblitz.com/~/github.com/elgusty3a/AngularSeminario2024 |
+| NOMBRE | DNI | Sede | e-mail  | Github | Stackblitz |
+| :------------: | :---------------: |:---------------: |:---------------:| :-------------------: | :-------------------: |
+| Arias Gustavo | 30015088  | Tres Arroyos     | ariasgustavo3a@gmail.com | https://github.com/elgusty3a | https://stackblitz.com/~/github.com/elgusty3a/AngularSeminario2024 |
 
 
 #
@@ -27,8 +27,8 @@
 - Para las pruebas con la API se utilizaron las paginas https://apimocha.com y 'https://beeceptor.com las cuales son gratuitas y por ello tienen un limite de consultas por dia. si no funciona una se puede utilizar la otra.
 - los links para hacer las conssultas GET son los siguientes:
 
-const URLPILOTOS = 'https://apimocha.com/f1appdata/pilotos';
 const URLCIRCUITS = 'https://apimocha.com/f1appdata/circuits';
+const URLPILOTOS = 'https://apimocha.com/f1appdata/pilotos';
 const URLESCUDERIAS = 'https://apimocha.com/f1appdata/escuderias';
 
 o bien
@@ -47,6 +47,18 @@ const URLESCUDERIAS = 'https://f1app.free.beeceptor.com/escuderias';
 | circuitos            | GET     | F1AppDataService | getF1DataCircuits       |
 | pilotos              | GET     | F1AppDataService | getF1DataPilotos        |
 | escuderias           | GET     | F1AppDataService | getF1DataEscuderias     |
+
+# F1app
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6.
+
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 
 
