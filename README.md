@@ -6,7 +6,7 @@
 
 | NOMBRE | DNI | Sede | e-mail  | Github | Stackblitz |
 | :------------: | :---------------: |:---------------: |:---------------:| :-------------------: | :-------------------: |
-| Arias Gustavo | 30015088  | Tres Arroyos     | ariasgustavo3a@gmail.com | https://github.com/elgusty3a | https://stackblitz.com/~/github.com/elgusty3a/AngularSeminario2024 |
+| Arias Gustavo | 30015088  | Tres Arroyos     | ariasgustavo3a@gmail.com | https://github.com/elgusty3a/AngularSeminario2024 | https://stackblitz.com/~/github.com/elgusty3a/AngularSeminario2024 |
 
 
 #
