@@ -19,8 +19,6 @@ export class LogicaAppService {
   }
 
   eventoPasado(circuit:Circuit):boolean {
-    // return (circuit.date_race.getDate() >= (this.hoy.getDate())&&(circuit.date_race.getMonth() >= (1+this.hoy.getMonth())));
     return (this.crearFechaConString(circuit.date_race) < (this.hoy));
-    // return (circuit.pass);
   }
 }

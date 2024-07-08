@@ -1,6 +1,7 @@
 import { Injectable, OnInit } from '@angular/core';
 import { Circuit } from './circuit-list/Circuit';
-import { Pilotos } from './pilotos-list/Pilotos';
+import { Piloto } from './pilotos-list/Piloto';
+import { Escuderia } from './escuderias-list/Escuderia';
 
 @Injectable({
   providedIn: 'root'
@@ -11,13 +12,8 @@ export class F1MockService implements OnInit{
   ngOnInit(): void {
     
   }
-
-    // hoy:Date = new Date();
     
     hoy = new Date();
-    // fechaActual = String(this.hoy.getDate()).padStart(2, '0') + '/' + String(this.hoy.getMonth() + 1).padStart(2, '0') + '/' + this.hoy.getFullYear();
-    dia: number = (this.hoy.getMonth());
-    
     
     circuits: Circuit[]=[
       {
@@ -107,7 +103,7 @@ export class F1MockService implements OnInit{
       
     ];
 
-    pilotos: Pilotos[] = 
+    pilotos: Piloto[] = 
     [
       {
         name: "Charles Leclerc",
@@ -167,11 +163,50 @@ export class F1MockService implements OnInit{
       },  
     ];
 
+    escuderias: Escuderia[] = 
+    [
+      {
+        name: "Ferrari",
+        country: "Italia",
+        debut: "1950",
+        bio: "El equipo Ferrari es la entidad con más historia de la Fórmula 1, con un legado que se remonta a la temporada inaugural de 1950 y un nutrido palmarés compuesto por dieciséis títulos del Mundial de Constructores y quince del de Pilotos. Enzo Ferrari fundó la entidad en 1929, que en sus inicios ejerció como equipo privado. En 1933, su formación se convirtió en el esfuerzo de fábrica de Alfa Romeo. En 1937, Alfa Romeo compró las acciones de la Scuderia Ferrari y transfirió su actividad a la división de Alfa Corse. Enzo Ferrari dejó la empresa en 1939. En la década de 1940, Ferrari dio sus primeros pasos como constructor y productor de automóviles. En 1943, trasladó su actividad de Módena a Maranello. Su debut en el automovilismo de Grandes Premios se produjo en Italia 1948. En 1950 se constituyó el Mundial de Fórmula 1 y Ferrari se inscribió en él, aunque se ausentó de la carrera inaugural en Silverstone por una disputa económica. En Gran Bretaña 1951, José Froilán González consiguió su primera victoria. En 1952, Alberto Ascari se hizo con el primer campeonato.",
+        imageCoche: "assets/img/Ferrari.jpg",
+        imageEscudo: "assets/img/FerrEscudo.jpg"
+      },
+      {
+        name: "Mercedes",
+        country: "Alemania",
+        debut: "2010",
+        bio: "El origen de Mercedes en el automovilismo de Grandes Premios se remonta a la década de 1930, cuando el constructor fue una de las fuerzas dominantes del panorama europeo. Ganó el título europeo en 1935, 1937 y 1938 con Rudolf Caracciola como piloto estrella y Alfred Neubauer como director deportivo. En 1954 y 1955, Mercedes se inscribió en el campeonato del mundo de Fórmula 1 con Juan Manuel Fangio como primer espada. El argentino ganó el título de pilotos en ambas temporadas y la marca cosechó nueve victorias. No ganó el título de Constructores porque éste no se disputó hasta 1958. Mercedes se retiró del automovilismo deportivo después del desastre de Le Mans 1955, pero regresó en 1994 en calidad de fabricante de motores. Entre 1994 y 2009, sus unidades de potencia ganaron cuatro títulos de Pilotos y dos de Constructores. La temporada 2010 fue la del retorno de Mercedes a la Fórmula 1 como equipo oficial. Ross Brawn asumió el liderazgo deportivo y técnico del proyecto, que contaba con el siete veces campeón Michael Schumacher en su alineación.",
+        imageCoche: "assets/img/Mercedes.jpg",
+        imageEscudo: "assets/img/MercedesEscudo.jpg"
+      },
+      {
+        name: "McLaren",
+        country: "Inglaterra",
+        debut: "1966",
+        bio: "McLaren dio sus primeros pasos en la Fórmula 1 en 1966, de la mano de su fundador, el legendario Bruce McLaren. En cinco brillantes décadas de historia, McLaren ha participado en más de 800 carreras, obteniendo más de 180 victorias, más de 150 pole position, conquistando ocho campeonatos de constructores y doce de pilotos. Además de haber contado en sus filas con algunos de los mejores pilotos de la historia de la F1, incluyendo a Emerson Fittipaldi, Niki Lauda, James Hunt, Mika Hakkinen, Lewis Hamilton y por supuesto la dupla explosiva conformada por Ayrton Senna y Alain Prost, que tantas emociones brindó a los aficionados a principios de los noventa, con los motores Honda.",
+        imageCoche: "assets/img/McLaren.jpg",
+        imageEscudo: "assets/img/MLEscudo.jpg"
+      },
+      {
+        name: "Red Bull",
+        country: "Autria",
+        debut: "2005",
+        bio: "Red Bull Racing es un equipo privado de origen austríaco con sede en Milton Keynes, en Gran Bretaña. Es propiedad de la marca de bebidas homónima. El origen de Red Bull en el automovilismo se remonta al año 1987, cuando fue patrocinadora personal del piloto Gerhard Berger. Entre 1995 y 2004, patrocinó al equipo Sauber. En 2005, compró los restos de Jaguar Racing y fundó su propia escudería: Red Bull Racing. Con el apoyo económico de Dietrich Mateschitz y la dirección deportiva de Christian Horner, la entidad se embarcó en un proyecto a largo plazo. Ganarse el respeto de sus rivales fue el primer reto, y es que muchos dudaban que una marca de bebidas fuera capaz de crear monoplazas competitivos.",
+        imageCoche: "assets/img/RB.jpg",
+        imageEscudo: "assets/img/RBEscudo.jpg"
+      }
+    ];
+
   getMockDataCircuits() {
     return this.circuits;
   }
   getMockDataPilotos() {
     return this.pilotos;
+  }
+  getMockDataEscuderias() {
+    return this.escuderias;
   }
 }
 
@@ -343,4 +378,40 @@ export class F1MockService implements OnInit{
   }
 ]
  * 
+ * Escuderias
+ *
+ * [
+      {
+        "name": "Ferrari",
+        "country": "Italia",
+        "debut": "1950",
+        "bio": "El equipo Ferrari es la entidad con más historia de la Fórmula 1, con un legado que se remonta a la temporada inaugural de 1950 y un nutrido palmarés compuesto por dieciséis títulos del Mundial de Constructores y quince del de Pilotos. Enzo Ferrari fundó la entidad en 1929, que en sus inicios ejerció como equipo privado. En 1933, su formación se convirtió en el esfuerzo de fábrica de Alfa Romeo. En 1937, Alfa Romeo compró las acciones de la Scuderia Ferrari y transfirió su actividad a la división de Alfa Corse. Enzo Ferrari dejó la empresa en 1939. En la década de 1940, Ferrari dio sus primeros pasos como constructor y productor de automóviles. En 1943, trasladó su actividad de Módena a Maranello. Su debut en el automovilismo de Grandes Premios se produjo en Italia 1948. En 1950 se constituyó el Mundial de Fórmula 1 y Ferrari se inscribió en él, aunque se ausentó de la carrera inaugural en Silverstone por una disputa económica. En Gran Bretaña 1951, José Froilán González consiguió su primera victoria. En 1952, Alberto Ascari se hizo con el primer campeonato.",
+        "imageCoche": "assets/img/Ferrari.jpg",
+        "imageEscudo": "assets/img/FerrEscudo.jpg"
+      },
+      {
+        "name": "Mercedes",
+        "country": "Alemania",
+        "debut": "2010",
+        "bio": "El origen de Mercedes en el automovilismo de Grandes Premios se remonta a la década de 1930, cuando el constructor fue una de las fuerzas dominantes del panorama europeo. Ganó el título europeo en 1935, 1937 y 1938 con Rudolf Caracciola como piloto estrella y Alfred Neubauer como director deportivo. En 1954 y 1955, Mercedes se inscribió en el campeonato del mundo de Fórmula 1 con Juan Manuel Fangio como primer espada. El argentino ganó el título de pilotos en ambas temporadas y la marca cosechó nueve victorias. No ganó el título de Constructores porque éste no se disputó hasta 1958. Mercedes se retiró del automovilismo deportivo después del desastre de Le Mans 1955, pero regresó en 1994 en calidad de fabricante de motores. Entre 1994 y 2009, sus unidades de potencia ganaron cuatro títulos de Pilotos y dos de Constructores. La temporada 2010 fue la del retorno de Mercedes a la Fórmula 1 como equipo oficial. Ross Brawn asumió el liderazgo deportivo y técnico del proyecto, que contaba con el siete veces campeón Michael Schumacher en su alineación.",
+        "imageCoche": "assets/img/Mercedes.jpg",
+        "imageEscudo": "assets/img/MercedesEscudo.jpg"
+      },
+      {
+        "name": "McLaren",
+        "country": "Inglaterra",
+        "debut": "1966",
+        "bio": "McLaren dio sus primeros pasos en la Fórmula 1 en 1966, de la mano de su fundador, el legendario Bruce McLaren. En cinco brillantes décadas de historia, McLaren ha participado en más de 800 carreras, obteniendo más de 180 victorias, más de 150 pole position, conquistando ocho campeonatos de constructores y doce de pilotos. Además de haber contado en sus filas con algunos de los mejores pilotos de la historia de la F1, incluyendo a Emerson Fittipaldi, Niki Lauda, James Hunt, Mika Hakkinen, Lewis Hamilton y por supuesto la dupla explosiva conformada por Ayrton Senna y Alain Prost, que tantas emociones brindó a los aficionados a principios de los noventa, con los motores Honda.",
+        "imageCoche": "assets/img/McLAren.jpg",
+        "imageEscudo": "assets/img/MLEscudo.jpg"
+      },
+      {
+        "name": "Red Bull",
+        "country": "Autria",
+        "debut": "2005",
+        "bio": "Red Bull Racing es un equipo privado de origen austríaco con sede en Milton Keynes, en Gran Bretaña. Es propiedad de la marca de bebidas homónima. El origen de Red Bull en el automovilismo se remonta al año 1987, cuando fue patrocinadora personal del piloto Gerhard Berger. Entre 1995 y 2004, patrocinó al equipo Sauber. En 2005, compró los restos de Jaguar Racing y fundó su propia escudería: Red Bull Racing. Con el apoyo económico de Dietrich Mateschitz y la dirección deportiva de Christian Horner, la entidad se embarcó en un proyecto a largo plazo. Ganarse el respeto de sus rivales fue el primer reto, y es que muchos dudaban que una marca de bebidas fuera capaz de crear monoplazas competitivos.",
+        "imageCoche": "assets/img/RB.jpg",
+        "imageEscudo": "assets/img/RBEscudo.jpg"
+      }
+    ];
  */

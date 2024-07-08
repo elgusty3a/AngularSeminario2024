@@ -8,7 +8,6 @@ import { BehaviorSubject } from 'rxjs';
 export class F1ShopService {
 
   private _listaCompras:Circuit[] = [];
-
   listaCompras: BehaviorSubject<Circuit[]> = new BehaviorSubject(this._listaCompras);
   
 
